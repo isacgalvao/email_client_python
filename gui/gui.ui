@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="tela1">
+    <property name="background">#3A3A3A</property>
+    <property name="geometry">480x320</property>
+    <property name="height">200</property>
+    <property name="iconphoto">icon.png</property>
+    <property name="resizable">none</property>
+    <property name="takefocus">true</property>
+    <property name="title" translatable="yes">Email Client [Rede de Computadores]</property>
+    <property name="width">200</property>
+    <bind sequence="" handler="" add="" />
+    <child>
+      <object class="pygubu.builder.widgets.toplevelmenu" id="toplevelmenu1">
+        <child>
+          <object class="tk.Menu" id="menu1">
+            <child>
+              <object class="tk.Menuitem.Command" id="command3">
+                <property name="command" type="command" cbtype="simple">on_alterar_email</property>
+                <property name="label" translatable="yes">Alterar configurações</property>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Command" id="command4">
+                <property name="command" type="command" cbtype="simple">on_exit</property>
+                <property name="label" translatable="yes">Sair</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label1">
+        <property name="background">#3A3A3A</property>
+        <property name="font">{IBM Plex Mono} 10 {bold}</property>
+        <property name="foreground">#80F908</property>
+        <property name="text" translatable="yes">Destinatário:</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="entry4">
+        <property name="background">#C4C4C4</property>
+        <property name="relief">flat</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">30</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label2">
+        <property name="background">#3A3A3A</property>
+        <property name="font">{IBM Plex Mono} 10 {bold}</property>
+        <property name="foreground">#80F908</property>
+        <property name="text" translatable="yes">Assunto:</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="entry5">
+        <property name="background">#C4C4C4</property>
+        <property name="relief">flat</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">30</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label3">
+        <property name="background">#3A3A3A</property>
+        <property name="font">{IBM Plex Mono} 10 {bold}</property>
+        <property name="foreground">#80F908</property>
+        <property name="text" translatable="yes">Digite a mensagem:</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Text" id="text1">
+        <property name="background">#C4C4C4</property>
+        <property name="height">10</property>
+        <property name="relief">flat</property>
+        <property name="width">50</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">40</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button1">
+        <property name="command" type="command" cbtype="simple">on_enviar</property>
+        <property name="text" translatable="yes">Enviar Email</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">15</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Progressbar" id="progressbar2">
+        <property name="length">404</property>
+        <property name="mode">indeterminate</property>
+        <property name="orient">horizontal</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="relx">0.083</property>
+          <property name="rely">0.79</property>
+          <property name="x">0</property>
+          <property name="y">0</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="tela2">
+    <property name="height">250</property>
+    <property name="iconphoto">icon.png</property>
+    <property name="resizable">none</property>
+    <property name="takefocus">true</property>
+    <property name="width">300</property>
+    <child>
+      <object class="tk.LabelFrame" id="labelframe2">
+        <property name="height">200</property>
+        <property name="padx">5</property>
+        <property name="text" translatable="yes">Configurações</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property type="col" id="0" name="pad">0</property>
+          <property type="col" id="0" name="weight">0</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="label4">
+            <property name="text" translatable="yes">Email:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="entry7">
+            <property name="textvariable">string:email_</property>
+            <property name="validate">focusout</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="label5">
+            <property name="text" translatable="yes">Senha:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="entry8">
+            <property name="textvariable">string:senha</property>
+            <property name="validate">focusout</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="button2">
+            <property name="command" type="command" cbtype="simple">on_alterar</property>
+            <property name="text" translatable="yes">Alterar</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">0</property>
+              <property name="pady">20</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">e</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="label6">
+            <property name="text" translatable="yes">Servidor SMTP:</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property type="col" id="1" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="entry9">
+            <property name="textvariable">string:servidor_smtp</property>
+            <property name="validate">focusout</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property type="col" id="1" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="label7">
+            <property name="text" translatable="yes">Porta:</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property type="col" id="1" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="entry10">
+            <property name="textvariable">string:porta</property>
+            <property name="validate">focusout</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property type="col" id="1" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.LabelFrame" id="labelframe1">
+        <property name="height">200</property>
+        <property name="text" translatable="yes">Aviso</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">5</property>
+          <property name="padx">10</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property type="col" id="0" name="pad">0</property>
+          <property type="col" id="0" name="weight">0</property>
+        </layout>
+        <child>
+          <object class="tk.Message" id="message2">
+            <property name="foreground">#eb0214</property>
+            <property name="text" translatable="yes">Caso esteja utilizando o Gmail, não esqueça de ativar o acesso de apps menos seguros</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">s</property>
+              <property type="row" id="6" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="button4">
+            <property name="command" type="command" cbtype="simple">on_tutorial</property>
+            <property name="text" translatable="yes">Tutorial</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property type="row" id="6" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
